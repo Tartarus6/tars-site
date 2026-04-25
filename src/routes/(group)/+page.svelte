@@ -6,72 +6,102 @@
 	import IconSvelte from '$lib/icon_svelte.svg?raw';
 	import IconDesmos from '$lib/icon_desmos.svg?raw';
 	import IconSlimepedia from '$lib/iconSlimePink.svg?raw';
-	import IconHiby from '$lib/icon_hiby.svg?raw'
+	import IconHiby from '$lib/icon_hiby.svg?raw';
 	import BingoIconComponent from '$lib/BingoIconComponent.svelte';
 	import type { Component } from 'svelte';
 
 	type Cards = {
 		title: string;
 		content: string;
-		icon: string | { component: Component, props: any };
+		icon: string | { component: Component; props: any };
 		href: string;
 	}[];
 
 	const cards: Cards = [
 		{
-			title: 'Bingo',
-			content: "Right now, it's just got one board which has catchphrases from someone. But I might add more.",
-			icon: {
-				component: BingoIconComponent,
-				props: {}
-			},
-			href: '/bingo',
-		},
-		{
-			title: 'Sphere Surface Area',
+			title: 'Slimepedia',
 			content:
-				'I have spent a very very long time proving the surface of a sphere using only polygons. I ended up using a bunch of trapezoids, and proving what the surface area approaches. This page is my ramblings explaining how I did it.',
-			icon: IconDesmos,
-			href: '/sphere',
-		},
-		{
-			title: "Slimepedia",
-			content: "I made a very, VERY, faithful recreation of the Slimepedia from the game Slime Rancher 2. It acts as a wiki built into the game, and now it's built into my website. (Sound Recommended)",
+				"I made a very, VERY, faithful recreation of the Slimepedia from the game Slime Rancher 2. It acts as a wiki built into the game, and now it's built into my website. (Sound Recommended)",
 			icon: IconSlimepedia,
-			href: "https://slimepedia.tartarus6.com",
-		},
-		{
-			title: "Bingo Problem",
-			content: 'An interesting math problem that I have been working on a closed solution for, and have yet to succeed. Combinatorics is neat.',
-			icon: { 
-				component: BingoIconComponent, 
-				props: { 
-					interactive: false, 
-					boardState: [false, true, true, true, true, true, true, true, false, true, true, false, true, true, true, true, true, false, true, true, true, true, true, true, false]
-				}
-			},
-			href: '/bingo-problem',
+			href: 'https://slimepedia.tartarus6.com'
 		},
 		{
 			title: 'HiBy OS Crack',
 			content:
 				"HiBy is a company that makes modern MP3 players. This project is working on cracking the firmware of HiBy's linux devices.",
 			icon: IconHiby,
-			href: 'https://github.com/Tartarus6/hiby_os_crack',
+			href: 'https://github.com/hiby-modding'
+		},
+		{
+			title: 'Sphere Surface Area',
+			content:
+				'I have spent a very very long time proving the surface of a sphere using only polygons. I ended up using a bunch of trapezoids, and proving what the surface area approaches. This page is my ramblings explaining how I did it.',
+			icon: IconDesmos,
+			href: '/sphere'
+		},
+		{
+			title: 'Bingo Problem',
+			content:
+				'An interesting math problem that I have been working on a closed solution for, and have yet to succeed. Combinatorics is neat.',
+			icon: {
+				component: BingoIconComponent,
+				props: {
+					interactive: false,
+					boardState: [
+						false,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						false,
+						true,
+						true,
+						false,
+						true,
+						true,
+						true,
+						true,
+						true,
+						false,
+						true,
+						true,
+						true,
+						true,
+						true,
+						true,
+						false
+					]
+				}
+			},
+			href: '/bingo-problem'
+		},
+		{
+			title: 'Bingo',
+			content:
+				"Right now, it's just got one board which has catchphrases from someone. But I might add more.",
+			icon: {
+				component: BingoIconComponent,
+				props: {}
+			},
+			href: '/bingo'
 		},
 		{
 			title: 'Notes App',
-			content: 'I have been unhappy with every notes app I have tried. So I made my own. At the moment its just an open test site, but I plan to build it into an actual app.',
+			content:
+				'I have been unhappy with every notes app I have tried. So I made my own. At the moment its just an open test site, but I plan to build it into an actual app.',
 			icon: IconSvelte,
-			href: 'https://notes.tartarus6.com',
+			href: 'https://notes.tartarus6.com'
 		},
 		{
 			title: 'Project Euler',
 			content:
 				'Project Euler is a website with a bunch of programming challenges. Solving them is how I learned to program. Here is a page that walks through how to solve a few, as a resource to help learning programming.',
 			icon: IconProjectEuler,
-			href: '/project-euler',
-		},
+			href: '/project-euler'
+		}
 	];
 </script>
 
