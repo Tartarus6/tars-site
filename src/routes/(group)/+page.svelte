@@ -28,21 +28,21 @@
 		{
 			title: 'HiBy OS Crack',
 			content:
-				"HiBy is a company that makes modern MP3 players. This project is working on cracking the firmware of HiBy's linux devices.",
+				"HiBy is a company that makes modern MP3 players. This project is working on cracking the firmware of HiBy's linux devices as well as developing custom modded firmware for them.",
 			icon: IconHiby,
 			href: 'https://github.com/hiby-modding'
 		},
 		{
 			title: 'Sphere Surface Area',
 			content:
-				'I have spent a very very long time proving the surface of a sphere using only polygons. I ended up using a bunch of trapezoids, and proving what the surface area approaches. This page is my ramblings explaining how I did it.',
+				'I have spent a very very long time proving the surface of a sphere using only polygons. I ended up using a bunch of trapezoids, and proving what the surface area approaches. This page is my ramblings explaining how I did it, including cool desmos graphs.',
 			icon: IconDesmos,
 			href: '/sphere'
 		},
 		{
 			title: 'Bingo Problem',
 			content:
-				'An interesting math problem that I have been working on a closed solution for, and have yet to succeed. Combinatorics is neat.',
+				'An interesting math problem that I have been working on a closed solution for, and have yet to succeed. Combinatorics is neat. This page has some visuals that hopefully help make the problem intuitive enough.',
 			icon: {
 				component: BingoIconComponent,
 				props: {
@@ -118,7 +118,7 @@
 		<p>yeah!</p>
 		<p>this website is sort of like a resume for me</p>
 		<p></p>
-		<p>itll explain cool projects ive done, link to em, and such</p>
+		<p>below are some cool projects i've done</p>
 	</TerminalComponent>
 </div>
 

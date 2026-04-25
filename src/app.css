@@ -55,7 +55,7 @@
 
 html {
 	/* static background pattern */
-	overflow: hidden;
+	overflow-y: auto;
 }
 
 body {
@@ -67,20 +67,26 @@ body {
 	margin: 0;
 
 	/* static background pattern */
-	overflow: auto;
-	height: 100vh;
+	background-attachment: fixed;
+	min-height: 100vh;
 }
 
 * {
 	font-family: var(--font-display);
 }
 
-p, span {
+p,
+span {
 	font-weight: 500;
 }
 
 /* headers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--font-display);
 	font-weight: 700;
 	line-height: 1.2;
