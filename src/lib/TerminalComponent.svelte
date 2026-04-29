@@ -9,9 +9,10 @@
 	}
 
 	let props: Props = $props();
+	const rootClass = $derived(`terminal-component w-full pb-2 ${props.class ?? ''}`);
 </script>
 
-<div class="terminal-component w-full pb-2 {props.class}">
+<div class={rootClass}>
 	<ButtonComponent>
 		<div class="grid w-full grid-cols-1">
 			<div class="mb-2 grid grid-cols-[auto_1fr]">
@@ -28,26 +29,29 @@
 </div>
 
 <style>
+	.terminal-component-content {
+		color: var(--color-tarblue-100, #e2e8f0);
+	}
+
 	:global(.terminal-component-content > *) {
-		display: grid;
-		grid-template-columns: auto 1fr;
 		margin: 0;
+		position: relative;
+		padding-left: 1rem;
+	}
+
+	/* allow for empty lines to be rendered */
+	:global(.terminal-component-content > *:empty::after) {
+		content: '\200B'; /* add a zero width space so that the line automatically sizes properly */
 	}
 
 	:global(.terminal-component-content > *::before) {
-		all: unset;
 		content: '>';
-		margin-right: 0.5rem;
+		position: absolute;
+		left: 0;
+		top: 0;
 		font-weight: bold;
 		color: rgb(34 197 94); /* text-green-500 */
 		user-select: none;
 		font-size: 1rem;
-		display: flex;
-		align-items: top; /* Vertically center the prefix */
-		text-decoration: none; /* Prevent underline or other decorations */
-	}
-
-	:global(.terminal-component-content *) {
-		color: var(--color-tarblue-100, #e2e8f0);
 	}
 </style>
