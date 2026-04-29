@@ -102,16 +102,21 @@
 	</ButtonComponent>
 
 	<TerminalComponent title="trapezoids!">
-		<p>by splitting the sphere into 'n' layers</p>
-		<p>and spacing 'n' points evenly on each layer,</p>
+		<p>by splitting the sphere into {@html katex.renderToString('n')} layers</p>
+		<p>and spacing {@html katex.renderToString('n')} points evenly on each layer,</p>
 		<p>then connecting the points on each layer along the peremeter,</p>
 		<p>and each point to the corresponding point above it,</p>
 		<p></p>
-		<p>you get a shape that approaches a sphere as 'n' approaches infinity!</p>
+		<p>
+			you get a shape that approaches a sphere as {@html katex.renderToString(
+				'n \\rightarrow \\infin'
+			)}!
+		</p>
 		<p></p>
 		<p>
-			not long after, i developed a formula that represents the trapezoids added up as n approaches
-			infinity
+			not long after, i developed a formula that represents the trapezoids added up as {@html katex.renderToString(
+				'n \\rightarrow \\infin'
+			)}
 		</p>
 		<p></p>
 		<p>now all thats left is simplification...</p>
@@ -134,17 +139,35 @@
 			managable
 		</p>
 		<p></p>
-		<p>turns out that it just equals 2 times pi times r squared</p>
+		<p>turns out that it just equals {@html katex.renderToString('2 \\pi r^{2}')}</p>
 		<p>which is half a sphere, exactly correct</p>
 		<p></p>
 		<p>tada!</p>
 	</TerminalComponent>
 
 	<ButtonComponent>
-		<div class=" h-full w-full overflow-x-scroll overflow-y-hidden">
-			{@html katex.renderToString(
-				String.raw`\lim_{ n \to\infty}\left(\displaystyle\sum_{i=0}^{n-1}\left(n*\sqrt{\left(\left(\dfrac{\left|-\left(\sqrt{r^{2}-\left(\left(i+1\right)\cdot\dfrac{r}{n}\right)^{2}}\right)\left(\dfrac{-\sin\left(\dfrac{2\pi}{n}\right)}{1-\cos\left(\dfrac{2\pi}{n}\right)}\right)+\left(\sqrt{r^{2}-\left(i\cdot\dfrac{r}{n}\right)^{2}}\right)\left(\dfrac{-\sin\left(\dfrac{2\pi}{n}\right)}{1-\cos\left(\dfrac{2\pi}{n}\right)}\right)\right|}{\sqrt{1+\left(\dfrac{-\sin\left(\dfrac{2\pi}{n}\right)}{1-\cos\left(\dfrac{2\pi}{n}\right)}\right)^{2}}}\right)^2+\left(\dfrac{r}{n}\right)^{2}\right)}\cdot\dfrac{\left(\sqrt{2\left(\sqrt{r^{2}-\left(i\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}-2\left(\sqrt{r^{2}-\left(i\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}\cos\left(\dfrac{2\pi}{n}\right)}\right)+\left(\sqrt{2\left(\sqrt{r^{2}-\left(\left(i+1\right)\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}-2\left(\sqrt{r^{2}-\left(\left(i+1\right)\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}\cos\left(\dfrac{2\pi}{n}\right)}\right)}{2}\right)\right)`
-			)}
+		<div class="grid grid-cols-1 grid-rows-1">
+			<div class="col-start-1 row-start-1 h-full w-full overflow-x-scroll overflow-y-hidden">
+				{@html katex.renderToString(
+					String.raw`\lim_{ n \to\infty}\left(\displaystyle\sum_{i=0}^{n-1}\left(n*\sqrt{\left(\left(\dfrac{\left|-\left(\sqrt{r^{2}-\left(\left(i+1\right)\cdot\dfrac{r}{n}\right)^{2}}\right)\left(\dfrac{-\sin\left(\dfrac{2\pi}{n}\right)}{1-\cos\left(\dfrac{2\pi}{n}\right)}\right)+\left(\sqrt{r^{2}-\left(i\cdot\dfrac{r}{n}\right)^{2}}\right)\left(\dfrac{-\sin\left(\dfrac{2\pi}{n}\right)}{1-\cos\left(\dfrac{2\pi}{n}\right)}\right)\right|}{\sqrt{1+\left(\dfrac{-\sin\left(\dfrac{2\pi}{n}\right)}{1-\cos\left(\dfrac{2\pi}{n}\right)}\right)^{2}}}\right)^2+\left(\dfrac{r}{n}\right)^{2}\right)}\cdot\dfrac{\left(\sqrt{2\left(\sqrt{r^{2}-\left(i\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}-2\left(\sqrt{r^{2}-\left(i\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}\cos\left(\dfrac{2\pi}{n}\right)}\right)+\left(\sqrt{2\left(\sqrt{r^{2}-\left(\left(i+1\right)\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}-2\left(\sqrt{r^{2}-\left(\left(i+1\right)\cdot\dfrac{r}{n}\right)^{2}}\right)^{2}\cos\left(\dfrac{2\pi}{n}\right)}\right)}{2}\right)\right)`
+				)}
+			</div>
+			<div
+				class="pointer-events-none col-start-1 row-start-1 flex h-full w-full items-center justify-end"
+				aria-hidden="true"
+			>
+				<div class="animate-bounce-r">
+					<svg class="size-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M8 5L16 12L8 19"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</div>
+			</div>
 		</div>
 	</ButtonComponent>
 
