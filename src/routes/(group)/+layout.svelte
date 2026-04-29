@@ -4,7 +4,9 @@
 
 <div class="@container pb-16 max-md:text-sm max-sm:text-xs">
 	<div class="bg-tarred-800 text-tarred-100 grid w-full grid-cols-1 justify-items-center p-4">
-		<span class="text-5xl font-bold">Tar's Site</span>
+		<a href="/">
+			<span class="text-5xl font-bold">Tar's Site</span>
+		</a>
 		<span class="text-2xl">and stuff</span>
 	</div>
 	<div class="grid w-full justify-center">
